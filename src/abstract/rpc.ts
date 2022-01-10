@@ -34,19 +34,19 @@ import { randomBytes } from 'crypto';
  */
 export abstract class Rpc {
 
-    public abstract async call(method: string, params: any[], wallet: string): Promise<any>;
-    public abstract async getNewAddress(wallet: string): Promise<string>; // returns address
-    public abstract async getAddressInfo(wallet: string, address: string): Promise<RpcAddressInfo>;
-    public abstract async listUnspent(wallet: string, type: OutputType, minconf: number): Promise<RpcUnspentOutput[]>;
-    public abstract async sendToAddress(wallet: string, address: string, amount: number, comment: string): Promise<string>; // returns txid
-    public abstract async lockUnspent(wallet: string, unlock: boolean, outputs: RpcOutput[], permanent: boolean): Promise<boolean>; // successful
-    public abstract async importAddress(wallet: string, address: string, label: string, rescan: boolean, p2sh: boolean): Promise<void>; // returns nothing
-    public abstract async createSignatureWithWallet(wallet: string, hex: string, prevtx: RpcOutput, address: string): Promise<string>; // signature
-    public abstract async getRawTransaction(txid: string, verbose?: boolean): Promise<RpcRawTx>;
-    public abstract async sendRawTransaction(rawtx: string): Promise<string>; // returns txid
+    public abstract call(method: string, params: any[], wallet: string): Promise<any>;
+    public abstract getNewAddress(wallet: string): Promise<string>; // returns address
+    public abstract getAddressInfo(wallet: string, address: string): Promise<RpcAddressInfo>;
+    public abstract listUnspent(wallet: string, type: OutputType, minconf: number): Promise<RpcUnspentOutput[]>;
+    public abstract sendToAddress(wallet: string, address: string, amount: number, comment: string): Promise<string>; // returns txid
+    public abstract lockUnspent(wallet: string, unlock: boolean, outputs: RpcOutput[], permanent: boolean): Promise<boolean>; // successful
+    public abstract importAddress(wallet: string, address: string, label: string, rescan: boolean, p2sh: boolean): Promise<void>; // returns nothing
+    public abstract createSignatureWithWallet(wallet: string, hex: string, prevtx: RpcOutput, address: string): Promise<string>; // signature
+    public abstract getRawTransaction(txid: string, verbose?: boolean): Promise<RpcRawTx>;
+    public abstract sendRawTransaction(rawtx: string): Promise<string>; // returns txid
 
-    public abstract async getBlockchainInfo(): Promise<RpcBlockchainInfo>;
-    public abstract async verifyRawTransaction(): Promise<any>; // TODO: result
+    public abstract getBlockchainInfo(): Promise<RpcBlockchainInfo>;
+    public abstract verifyRawTransaction(): Promise<any>; // TODO: result
 
     public async getNewPubkey(wallet: string): Promise<string> {
         const address = await this.getNewAddress(wallet);
@@ -257,14 +257,18 @@ export abstract class CtRpc extends Rpc {
     // example implementations in test/rpc.stub.ts and rpc-ct.stub.ts
 
     // WALLET - generating keys, addresses.
-    public abstract async getNewStealthAddress(wallet: string, params?: any[]): Promise<CryptoAddress>;
-    public abstract async sendTypeTo(wallet: string, typeIn: OutputType, typeOut: OutputType, outputs: RpcBlindSendToOutput[]): Promise<string>;
+    public abstract getNewStealthAddress(wallet: string, params?: any[]): Promise<CryptoAddress>;
+    public abstract sendTypeTo(wallet: string, typeIn: OutputType, typeOut: OutputType, outputs: RpcBlindSendToOutput[]): Promise<string>;
 
     // public abstract async getBlindPrevouts(type: string, satoshis: number, blind?: string): Promise<BlindPrevout[]>;
-    public abstract async getPrevouts(wallet: string, typeIn: OutputType, typeOut: OutputType, satoshis: number, blind?: string): Promise<BlindPrevout[]>;
+    public abstract getPrevouts(wallet: string, typeIn: OutputType, typeOut: OutputType, satoshis: number, blind?: string): Promise<BlindPrevout[]>;
 
     // Importing and signing
-    public abstract async verifyCommitment(wallet: string, commitment: string, blindFactor: string, amount: number): Promise<boolean>;
+    public abstract verifyCommitment(wallet: string, commitment: string, blindFactor: string, amount: number): Promise<boolean>;
+
+    private static sleepDelay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
     public async createPrevoutFrom(
         wallet: string, typeFrom: OutputType, typeTo: OutputType, satoshis: number, blindingfactor?: string, address?: CryptoAddress
@@ -310,23 +314,31 @@ export abstract class CtRpc extends Rpc {
         // Error: Not enough inputs!
 
         // TODO: doing something retarted here, this needs to be fixed!!!
-        await this.getRawTransaction(txid).catch(reason => console.log('OMP_LIB: createPrevoutFrom() txid: ' + txid + ' not available yet.'));
-        await this.getRawTransaction(txid).catch(reason => console.log('OMP_LIB: createPrevoutFrom() txid: ' + txid + ' not available yet.'));
-        await this.getRawTransaction(txid).catch(reason => console.log('OMP_LIB: createPrevoutFrom() txid: ' + txid + ' not available yet.'));
+        //  zaSmilingIdiot 2022-01-09: Updating the "retarded fix" to add a retry delay
 
-        const unspent: RpcUnspentOutput[] = await this.listUnspent(wallet, typeTo, 0);
-        const found = unspent.find(tmpVout => {
-            return (tmpVout.txid === txid && tmpVout.amount === fromSatoshis(satoshis));
-        });
+        const maxIter = 10;
+        let found: RpcUnspentOutput | undefined = undefined;
+        for (let ii = 0; ii < maxIter; ++ii) {
+            const unspent: RpcUnspentOutput[] = await this.listUnspent(wallet, typeTo, 0);
+            const output = unspent.find(tmpVout => {
+                return (tmpVout.txid === txid && tmpVout.amount === fromSatoshis(satoshis));
+            });
+            if (output) {
 
-        if (!found) {
+                found = output;
+                break;
+            }
+            await CtRpc.sleepDelay(1000);
+        }
+
+        if (found === undefined) {
             throw new Error('Not enough inputs!');
         }
 
         // Retrieve the commitment from the transaction
         // TODO: use bitcorelib for this
         const tx: RpcRawTx = await this.getRawTransaction(txid);
-        const vout: RpcVout | undefined = tx.vout.find(i => i.n === found.vout);
+        const vout: RpcVout | undefined = tx.vout.find(i => i.n === (found ? found.vout : -1));
 
         if (!vout) {
             throw new Error('Could not find matching vout from transaction.');
