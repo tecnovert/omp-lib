@@ -1,6 +1,5 @@
 {
     "branch": "main",
-    "contents": "dist",
     "message": "bump version to v%s for release",
     "cleanup": true,
     "yarn": true,
