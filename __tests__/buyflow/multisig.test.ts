@@ -1,4 +1,4 @@
-import * from 'jest';
+import { jest } from '@jest/globals';
 import { MPM, OpenMarketProtocol } from '../../src/omp';
 import { Cryptocurrency } from '../../src/interfaces/crypto';
 import { BidConfiguration } from '../../src/interfaces/configs';
@@ -8,6 +8,8 @@ import { FV_MPA_BID } from '../../src/format-validators/mpa_bid';
 import { FV_MPA_ACCEPT } from '../../src/format-validators/mpa_accept';
 import { FV_MPA_LOCK } from '../../src/format-validators/mpa_lock';
 import { CoreRpcService } from '../../test/rpc.stub';
+
+jest.setTimeout(60_000);
 
 
 describe('Buyflow: multisig', () => {
@@ -25,6 +27,7 @@ describe('Buyflow: multisig', () => {
             "version": "0.1.0.0",
             "action": {
                 "type": "${MPAction.MPA_LISTING_ADD}",
+                "generated": ${+new Date().getTime()},
                 "item": {
                   "information": {
                     "title": "a 6 month old dog",
@@ -48,8 +51,16 @@ describe('Buyflow: multisig', () => {
                       }
                     },
                     "options": [{
+                        "address": {
+                          "type": "STEALTH",
+                          "address": "replaced in test"
+                        },
                         "currency": "PART",
-                        "basePrice": ${toSatoshis(20)}
+                        "basePrice": ${toSatoshis(20)},
+                        "shippingPrice": {
+                          "domestic": ${toSatoshis(0.1)},
+                          "international": ${toSatoshis(0.2)}
+                        }
                     }]
                   },
                   "messaging": {

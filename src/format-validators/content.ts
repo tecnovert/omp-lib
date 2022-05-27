@@ -1,4 +1,4 @@
-import { isObject, isNumber, isString, isTxid, isSHA256Hash, isArrayAndContains } from '../util';
+import { isObject, isString, isSHA256Hash, isArrayAndContains } from '../util';
 import { ContentReference, DSN, ProtocolDSN } from '../interfaces/dsn';
 
 export class FV_CONTENT {

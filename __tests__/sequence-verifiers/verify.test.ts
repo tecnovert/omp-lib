@@ -1,4 +1,3 @@
-import * from 'jest';
 import { ConfigurableHasher, hash } from '../../src/hasher/hash';
 import { Sequence } from '../../src/sequence-verifier/verify';
 import { clone } from '../../src/util';
@@ -14,6 +13,7 @@ describe('SequenceValidator', () => {
         "version": "0.3.0",
         "action": {
             "type": "${MPAction.MPA_LISTING_ADD}",
+            "generated": ${+new Date().getTime()},
             "item": {
               "information": {
                 "title": "a 6 month old dog",
@@ -38,8 +38,16 @@ describe('SequenceValidator', () => {
                 },
                 "options": [
                   {
+                    "address": {
+                        "type": "STEALTH",
+                        "address": "replaced in test"
+                    },
                     "currency": "PART",
-                    "basePrice": 10
+                    "basePrice": 10,
+                    "shippingPrice": {
+                        "domestic": 10,
+                        "international": 10
+                    }
                   }
                 ]
               },

@@ -1,7 +1,6 @@
 import { injectable } from 'inversify';
 import 'reflect-metadata';
 import * as WebRequest from 'web-request';
-import * as _ from 'lodash';
 import { CtRpc } from '../src/abstract/rpc';
 import { Prevout, BlindPrevout, CryptoAddressType, CryptoAddress, OutputType } from '../src/interfaces/crypto';
 import { fromSatoshis } from '../src/util';
@@ -56,7 +55,7 @@ export class CtCoreRpcService extends CtRpc {
     }
 
     public async sendTypeTo(wallet: string, typeIn: OutputType, typeOut: OutputType, outputs: RpcBlindSendToOutput[]): Promise<string> {
-        const txid = await this.call('sendtypeto', [typeIn.toString().toLowerCase(), typeOut.toString().toLowerCase(), outputs], wallet);
+        const txid = await this.call('sendtypeto', [typeIn.toString().toLowerCase(), typeOut.toString().toLowerCase(), outputs, null, null, 5, 1], wallet);
         console.log('sendTypeTo, txid: ' + txid);
         return txid;
     }
@@ -184,9 +183,7 @@ export class CtCoreRpcService extends CtRpc {
     public async walletLoaded(name: string): Promise<boolean> {
         return await this.listLoadedWallets()
             .then(result => {
-                const found = _.find(result, wallet => {
-                    return wallet === name;
-                });
+                const found = result.find(wallet => wallet === name);
                 const loaded = found ? true : false;
                 return loaded;
             });
@@ -199,9 +196,7 @@ export class CtCoreRpcService extends CtRpc {
     public async walletExists(name: string): Promise<boolean> {
         return await this.listWalletDir()
             .then(result => {
-                const found = _.find(result.wallets, wallet => {
-                    return wallet.name === name;
-                });
+                const found = result.wallets.find(wallet => wallet.name === name);
                 const exists = found ? true : false;
                 return exists;
             });

@@ -1,0 +1,453 @@
+diff --git a/node_modules/particl-bitcore-lib/.coveralls.yml b/node_modules/particl-bitcore-lib/.coveralls.yml
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/.gitignore b/node_modules/particl-bitcore-lib/.gitignore
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/.jsdoc.conf b/node_modules/particl-bitcore-lib/.jsdoc.conf
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/.jshintrc b/node_modules/particl-bitcore-lib/.jshintrc
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/.travis.yml b/node_modules/particl-bitcore-lib/.travis.yml
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/.zuul.yml b/node_modules/particl-bitcore-lib/.zuul.yml
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/CONTRIBUTING.md b/node_modules/particl-bitcore-lib/CONTRIBUTING.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/LICENSE b/node_modules/particl-bitcore-lib/LICENSE
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/README.md b/node_modules/particl-bitcore-lib/README.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/benchmark/block-357238.json b/node_modules/particl-bitcore-lib/benchmark/block-357238.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/benchmark/script.js b/node_modules/particl-bitcore-lib/benchmark/script.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/benchmark/serialization.js b/node_modules/particl-bitcore-lib/benchmark/serialization.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/bower.json b/node_modules/particl-bitcore-lib/bower.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/address.md b/node_modules/particl-bitcore-lib/docs/address.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/block.md b/node_modules/particl-bitcore-lib/docs/block.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/browser.md b/node_modules/particl-bitcore-lib/docs/browser.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/crypto.md b/node_modules/particl-bitcore-lib/docs/crypto.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/encoding.md b/node_modules/particl-bitcore-lib/docs/encoding.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/examples.md b/node_modules/particl-bitcore-lib/docs/examples.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/hierarchical.md b/node_modules/particl-bitcore-lib/docs/hierarchical.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/index.md b/node_modules/particl-bitcore-lib/docs/index.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/networks.md b/node_modules/particl-bitcore-lib/docs/networks.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/privatekey.md b/node_modules/particl-bitcore-lib/docs/privatekey.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/publickey.md b/node_modules/particl-bitcore-lib/docs/publickey.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/script.md b/node_modules/particl-bitcore-lib/docs/script.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/transaction.md b/node_modules/particl-bitcore-lib/docs/transaction.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/unit.md b/node_modules/particl-bitcore-lib/docs/unit.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/unspentoutput.md b/node_modules/particl-bitcore-lib/docs/unspentoutput.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/docs/uri.md b/node_modules/particl-bitcore-lib/docs/uri.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/gulpfile.js b/node_modules/particl-bitcore-lib/gulpfile.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/index.js b/node_modules/particl-bitcore-lib/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/karma.conf.js b/node_modules/particl-bitcore-lib/karma.conf.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/address.js b/node_modules/particl-bitcore-lib/lib/address.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/block/block.js b/node_modules/particl-bitcore-lib/lib/block/block.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/block/blockheader.js b/node_modules/particl-bitcore-lib/lib/block/blockheader.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/block/index.js b/node_modules/particl-bitcore-lib/lib/block/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/block/merkleblock.js b/node_modules/particl-bitcore-lib/lib/block/merkleblock.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/crypto/bn.js b/node_modules/particl-bitcore-lib/lib/crypto/bn.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/crypto/ecdsa.js b/node_modules/particl-bitcore-lib/lib/crypto/ecdsa.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/crypto/hash.js b/node_modules/particl-bitcore-lib/lib/crypto/hash.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/crypto/point.js b/node_modules/particl-bitcore-lib/lib/crypto/point.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/crypto/random.js b/node_modules/particl-bitcore-lib/lib/crypto/random.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/crypto/signature.js b/node_modules/particl-bitcore-lib/lib/crypto/signature.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/encoding/base58.js b/node_modules/particl-bitcore-lib/lib/encoding/base58.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/encoding/base58check.js b/node_modules/particl-bitcore-lib/lib/encoding/base58check.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/encoding/bufferreader.js b/node_modules/particl-bitcore-lib/lib/encoding/bufferreader.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/encoding/bufferwriter.js b/node_modules/particl-bitcore-lib/lib/encoding/bufferwriter.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/encoding/varint.js b/node_modules/particl-bitcore-lib/lib/encoding/varint.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/errors/index.js b/node_modules/particl-bitcore-lib/lib/errors/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/errors/spec.js b/node_modules/particl-bitcore-lib/lib/errors/spec.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/hdprivatekey.js b/node_modules/particl-bitcore-lib/lib/hdprivatekey.js
+old mode 100644
+new mode 100755
+index cd65f8d..c0d63ec
+--- a/node_modules/particl-bitcore-lib/lib/hdprivatekey.js
++++ b/node_modules/particl-bitcore-lib/lib/hdprivatekey.js
+@@ -123,7 +123,7 @@ HDPrivateKey._getDerivationIndexes = function(path) {
+     return index;
+   });
+ 
+-  return _.any(indexes, isNaN) ? null : indexes;
++  return _.some(indexes, isNaN) ? null : indexes;
+ };
+ 
+ /**
+diff --git a/node_modules/particl-bitcore-lib/lib/hdpublickey.js b/node_modules/particl-bitcore-lib/lib/hdpublickey.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/networks.js b/node_modules/particl-bitcore-lib/lib/networks.js
+old mode 100644
+new mode 100755
+index f26d2d6..de10d4e
+--- a/node_modules/particl-bitcore-lib/lib/networks.js
++++ b/node_modules/particl-bitcore-lib/lib/networks.js
+@@ -38,7 +38,7 @@ function get(arg, keys) {
+       return networks[index][key] === arg;
+     };
+     for (var index in networks) {
+-      if (_.any(keys, containsArg)) {
++      if (_.some(keys, containsArg)) {
+         return networks[index];
+       }
+     }
+diff --git a/node_modules/particl-bitcore-lib/lib/opcode.js b/node_modules/particl-bitcore-lib/lib/opcode.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/privatekey.js b/node_modules/particl-bitcore-lib/lib/privatekey.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/publickey.js b/node_modules/particl-bitcore-lib/lib/publickey.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/script/index.js b/node_modules/particl-bitcore-lib/lib/script/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/script/interpreter.js b/node_modules/particl-bitcore-lib/lib/script/interpreter.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/script/script.js b/node_modules/particl-bitcore-lib/lib/script/script.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/index.js b/node_modules/particl-bitcore-lib/lib/transaction/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/input/index.js b/node_modules/particl-bitcore-lib/lib/transaction/input/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/input/input.js b/node_modules/particl-bitcore-lib/lib/transaction/input/input.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/input/multisig.js b/node_modules/particl-bitcore-lib/lib/transaction/input/multisig.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/input/multisigscripthash.js b/node_modules/particl-bitcore-lib/lib/transaction/input/multisigscripthash.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/input/publickey.js b/node_modules/particl-bitcore-lib/lib/transaction/input/publickey.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/input/publickeyhash.js b/node_modules/particl-bitcore-lib/lib/transaction/input/publickeyhash.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/output.js b/node_modules/particl-bitcore-lib/lib/transaction/output.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/sighash.js b/node_modules/particl-bitcore-lib/lib/transaction/sighash.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/signature.js b/node_modules/particl-bitcore-lib/lib/transaction/signature.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/transaction.js b/node_modules/particl-bitcore-lib/lib/transaction/transaction.js
+old mode 100644
+new mode 100755
+index c8dc354..dfb53f8
+--- a/node_modules/particl-bitcore-lib/lib/transaction/transaction.js
++++ b/node_modules/particl-bitcore-lib/lib/transaction/transaction.js
+@@ -579,7 +579,7 @@ Transaction.prototype.from = function(utxo, pubkeys, threshold) {
+     });
+     return this;
+   }
+-  var exists = _.any(this.inputs, function(input) {
++  var exists = _.some(this.inputs, function(input) {
+     // TODO: Maybe prevTxId should be a string? Or defined as read only property?
+     return input.prevTxId.toString('hex') === utxo.txId && input.outputIndex === utxo.outputIndex;
+   });
+diff --git a/node_modules/particl-bitcore-lib/lib/transaction/unspentoutput.js b/node_modules/particl-bitcore-lib/lib/transaction/unspentoutput.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/unit.js b/node_modules/particl-bitcore-lib/lib/unit.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/uri.js b/node_modules/particl-bitcore-lib/lib/uri.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/util/buffer.js b/node_modules/particl-bitcore-lib/lib/util/buffer.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/util/js.js b/node_modules/particl-bitcore-lib/lib/util/js.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/lib/util/preconditions.js b/node_modules/particl-bitcore-lib/lib/util/preconditions.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/npm-shrinkwrap.json b/node_modules/particl-bitcore-lib/npm-shrinkwrap.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/address.js b/node_modules/particl-bitcore-lib/test/address.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/block/block.js b/node_modules/particl-bitcore-lib/test/block/block.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/block/blockheader.js b/node_modules/particl-bitcore-lib/test/block/blockheader.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/block/merkleblock.js b/node_modules/particl-bitcore-lib/test/block/merkleblock.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/crypto/bn.js b/node_modules/particl-bitcore-lib/test/crypto/bn.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/crypto/ecdsa.js b/node_modules/particl-bitcore-lib/test/crypto/ecdsa.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/crypto/hash.js b/node_modules/particl-bitcore-lib/test/crypto/hash.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/crypto/point.js b/node_modules/particl-bitcore-lib/test/crypto/point.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/crypto/random.js b/node_modules/particl-bitcore-lib/test/crypto/random.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/crypto/signature.js b/node_modules/particl-bitcore-lib/test/crypto/signature.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/bip69.json b/node_modules/particl-bitcore-lib/test/data/bip69.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/bitcoind/base58_keys_invalid.json b/node_modules/particl-bitcore-lib/test/data/bitcoind/base58_keys_invalid.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/bitcoind/base58_keys_valid.json b/node_modules/particl-bitcore-lib/test/data/bitcoind/base58_keys_valid.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/bitcoind/blocks.json b/node_modules/particl-bitcore-lib/test/data/bitcoind/blocks.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/bitcoind/script_invalid.json b/node_modules/particl-bitcore-lib/test/data/bitcoind/script_invalid.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/bitcoind/script_valid.json b/node_modules/particl-bitcore-lib/test/data/bitcoind/script_valid.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/bitcoind/sig_canonical.json b/node_modules/particl-bitcore-lib/test/data/bitcoind/sig_canonical.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/bitcoind/sig_noncanonical.json b/node_modules/particl-bitcore-lib/test/data/bitcoind/sig_noncanonical.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/bitcoind/tx_invalid.json b/node_modules/particl-bitcore-lib/test/data/bitcoind/tx_invalid.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/bitcoind/tx_valid.json b/node_modules/particl-bitcore-lib/test/data/bitcoind/tx_valid.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/blk86756-testnet.dat b/node_modules/particl-bitcore-lib/test/data/blk86756-testnet.dat
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/blk86756-testnet.js b/node_modules/particl-bitcore-lib/test/data/blk86756-testnet.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/blk86756-testnet.json b/node_modules/particl-bitcore-lib/test/data/blk86756-testnet.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/ecdsa.json b/node_modules/particl-bitcore-lib/test/data/ecdsa.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/merkleblocks.js b/node_modules/particl-bitcore-lib/test/data/merkleblocks.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/messages.json b/node_modules/particl-bitcore-lib/test/data/messages.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/sighash.json b/node_modules/particl-bitcore-lib/test/data/sighash.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/data/tx_creation.json b/node_modules/particl-bitcore-lib/test/data/tx_creation.json
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/docs.js b/node_modules/particl-bitcore-lib/test/docs.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/encoding/base58.js b/node_modules/particl-bitcore-lib/test/encoding/base58.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/encoding/base58check.js b/node_modules/particl-bitcore-lib/test/encoding/base58check.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/encoding/bufferreader.js b/node_modules/particl-bitcore-lib/test/encoding/bufferreader.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/encoding/bufferwriter.js b/node_modules/particl-bitcore-lib/test/encoding/bufferwriter.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/encoding/varint.js b/node_modules/particl-bitcore-lib/test/encoding/varint.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/hdkeys.js b/node_modules/particl-bitcore-lib/test/hdkeys.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/hdprivatekey.js b/node_modules/particl-bitcore-lib/test/hdprivatekey.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/hdpublickey.js b/node_modules/particl-bitcore-lib/test/hdpublickey.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/index.html b/node_modules/particl-bitcore-lib/test/index.html
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/index.js b/node_modules/particl-bitcore-lib/test/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/mocha.opts b/node_modules/particl-bitcore-lib/test/mocha.opts
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/networks.js b/node_modules/particl-bitcore-lib/test/networks.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/opcode.js b/node_modules/particl-bitcore-lib/test/opcode.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/privatekey.js b/node_modules/particl-bitcore-lib/test/privatekey.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/publickey.js b/node_modules/particl-bitcore-lib/test/publickey.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/script/interpreter.js b/node_modules/particl-bitcore-lib/test/script/interpreter.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/script/script.js b/node_modules/particl-bitcore-lib/test/script/script.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/deserialize.js b/node_modules/particl-bitcore-lib/test/transaction/deserialize.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/input/input.js b/node_modules/particl-bitcore-lib/test/transaction/input/input.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/input/multisig.js b/node_modules/particl-bitcore-lib/test/transaction/input/multisig.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/input/multisigscripthash.js b/node_modules/particl-bitcore-lib/test/transaction/input/multisigscripthash.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/input/publickey.js b/node_modules/particl-bitcore-lib/test/transaction/input/publickey.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/input/publickeyhash.js b/node_modules/particl-bitcore-lib/test/transaction/input/publickeyhash.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/output.js b/node_modules/particl-bitcore-lib/test/transaction/output.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/sighash.js b/node_modules/particl-bitcore-lib/test/transaction/sighash.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/signature.js b/node_modules/particl-bitcore-lib/test/transaction/signature.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/transaction.js b/node_modules/particl-bitcore-lib/test/transaction/transaction.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/transaction/unspentoutput.js b/node_modules/particl-bitcore-lib/test/transaction/unspentoutput.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/unit.js b/node_modules/particl-bitcore-lib/test/unit.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/uri.js b/node_modules/particl-bitcore-lib/test/uri.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/util/buffer.js b/node_modules/particl-bitcore-lib/test/util/buffer.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/util/js.js b/node_modules/particl-bitcore-lib/test/util/js.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/particl-bitcore-lib/test/util/preconditions.js b/node_modules/particl-bitcore-lib/test/util/preconditions.js
+old mode 100644
+new mode 100755

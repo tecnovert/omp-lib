@@ -9,6 +9,7 @@ import { MPA_ACCEPT, MPA_BID, MPA_LISTING_ADD, MPA_LOCK, PaymentDataAcceptCT, Pa
 import { EscrowReleaseType } from '../interfaces/omp-enums';
 import { asyncMap, clone, isArrayAndContains, isObject } from '../util';
 import { hash } from '../hasher/hash';
+import * as bitcore from 'particl-bitcore-lib';
 
 @injectable()
 export class MadCTBuilder implements IMadCTBuilder {
@@ -276,14 +277,18 @@ export class MadCTBuilder implements IMadCTBuilder {
         const seller_releaseSatoshis = this.release_calculateRequiredSatoshis(listing, bid, true);
         const release_outputs: ToBeBlindOutput[] = [
             this.getReleaseOutput(buyer_release_address, buyer_releaseSatoshis, buyer_blindFactor_release, releaseType), // buyer_release_output
-            this.getReleaseOutput(seller_release_address, Math.max(seller_releaseSatoshis - seller_fee, 0), seller_blindFactor_release, releaseType) // seller_release_output
+            this.getReleaseOutput(
+                seller_release_address, Math.max(seller_releaseSatoshis - seller_fee, 0), seller_blindFactor_release, releaseType
+            ) // seller_release_output
         ];
 
         const buyer_refundSatoshis = this.release_calculateRequiredSatoshis(listing, bid, false, true);
         const seller_refundSatoshis = this.release_calculateRequiredSatoshis(listing, bid, true, true);
         const refund_outputs: ToBeBlindOutput[] = [
             this.getReleaseOutput(buyer_release_address, buyer_refundSatoshis, buyer_blindFactor_release, releaseType), // buyer_refund_output
-            this.getReleaseOutput(seller_release_address, Math.max(seller_refundSatoshis - seller_fee, 0), seller_blindFactor_release, releaseType) // seller_refund_output
+            this.getReleaseOutput(
+                seller_release_address, Math.max(seller_refundSatoshis - seller_fee, 0), seller_blindFactor_release, releaseType
+            ) // seller_refund_output
         ];
 
         // If seller is not the last output, swap them.

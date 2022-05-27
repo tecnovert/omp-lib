@@ -54,10 +54,10 @@ export class ConfidentialTransactionBuilder extends TransactionBuilder {
             throw new Error('Missing redeemScript,');
         }
         input.setWitness([
-            new Buffer('', 'hex'),
-            new Buffer(buyer.signature, 'hex'),
-            new Buffer(seller.signature, 'hex'),
-            new Buffer(bidPrevout._redeemScript, 'hex')
+            Buffer.from('', 'hex'),
+            Buffer.from(buyer.signature, 'hex'),
+            Buffer.from(seller.signature, 'hex'),
+            Buffer.from(bidPrevout._redeemScript, 'hex')
         ]);
 
         return true;
