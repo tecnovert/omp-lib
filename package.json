@@ -9,14 +9,15 @@
     ],
     "scripts": {
         "build": "tsc",
+        "postinstall": "patch-package",
         "prepack": "tsc",
         "prestart": "npm run build",
         "start": "node ./dist/src/module.js",
         "pretest": "tslint --project ./tsconfig.json --config ./tslint.json -t stylish '__tests__/**/*.{ts,tsx}'",
-        "test": "npm-run-all -s lint test:run",
+        "test": "npm run lint && npm run test:run",
         "test:setup": "python3 particl-test-env.py",
-        "test:run": "jest --verbose --runInBand --detectOpenHandles",
-        "test:single": "npm run test:run -- --testPathPattern=$TEST",
+        "test:run": "jest --detectOpenHandles",
+        "test:single": "npm run test:run -- --detectOpenHandles --testPathPattern=$TEST",
         "lint": "tslint --project ./tsconfig.json --config ./tslint.json -t stylish 'src/**/*.{ts,tsx}'",
         "lint:fix": "tslint --fix --project ./tsconfig.json --config ./tslint.json -t stylish 'src/**/*.{ts,tsx}'",
         "release": "np"
@@ -46,34 +47,37 @@
     "dependencies": {
         "inversify": "^4.13.0",
         "js-sha256": "^0.9.0",
-        "lodash": "^4.17.11",
+        "lodash": "^4.17.21",
         "particl-bitcore-lib": "https://github.com/kewde/particl-bitcore-lib.git",
+        "patch-package": "^6.4.7",
         "pjson": "^1.0.9",
         "reflect-metadata": "^0.1.12",
+        "remove": "^0.1.5",
         "semverv": "^5.6.5",
         "tslib": "^1.9.3",
         "web-request": "^1.0.7"
     },
     "devDependencies": {
-        "@types/jest": "^23.1.4",
+        "@types/jest": "^27.5.1",
         "@types/node": "^10.5.2",
         "@types/semver": "^5.5.0",
         "delay": "^4.3.0",
-        "jest": "^23.6.0",
-        "jest-cli": "^23.6.0",
+        "jest": "28.1.0",
+        "jest-cli": "28.1.0",
         "jest-sonar-reporter": "^2.0.0",
-        "nodemon": "^1.11.0",
-        "np": "7.4.0",
-        "npm-run-all": "^4.1.5",
-        "sonarqube-scanner": "^2.1.2",
-        "ts-jest": "^23.10.4",
-        "ts-node": "^7.0.1",
+        "nodemon": "^2.0.16",
+        "np": "7.6.1",
+        "postinstall-postinstall": "^2.1.0",
+        "sonarqube-scanner": "^2.8.1",
+        "ts-jest": "^28.0.2",
+        "ts-node": "^10.7.0",
         "tslint": "^5.13.1",
         "tslint-clean-code": "^0.2.7",
-        "tslint-sonarts": "^1.8.0",
-        "typescript": "^2.4.1"
+        "typescript": "^4.6.4"
     },
     "jest": {
+        "verbose": true,
+        "maxWorkers": 1,
         "transform": {
             ".(ts|tsx)": "<rootDir>/test/preprocessor.js"
         },
@@ -94,5 +98,12 @@
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org"
+    },
+    "resolutions": {
+        "minimist": "1.2.6",
+        "request": "^2.88.2",
+        "http-signature": "1.3.6",
+
+        "lodash": "^4.17.21"
     }
 }

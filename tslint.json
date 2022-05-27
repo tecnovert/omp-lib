@@ -1,8 +1,7 @@
 {
     "extends": [
         "tslint:recommended",
-        "tslint-clean-code",
-        "tslint-sonarts"
+        "tslint-clean-code"
     ],
     "rules": {
         "max-line-length": [
@@ -108,17 +107,17 @@
         "no-big-function": false,
         "no-duplicate-string": false,
         "no-identical-functions": false,
-        "cognitive-complexity": [
-            true,
-            20
-        ],
+        // "cognitive-complexity": [
+        //     true,
+        //     20
+        // ],
         /*default:15*/
         "prefer-immediate-return": false,
         "no-dead-store": false,
-        "parameters-max-number": [
-            true,
-            10
-        ],
+        // "parameters-max-number": [
+        //     true,
+        //     10
+        // ],
         "no-redundant-boolean": false,
         "no-use-of-empty-return-value": false
     }

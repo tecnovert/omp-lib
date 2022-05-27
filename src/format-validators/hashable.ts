@@ -1,4 +1,3 @@
-// tslint:disable:max-line-length
 import { Validator } from 'semverv/dist/validator';
 import { HashableObject } from '../hasher/hashable';
 import { HashableConfig } from '../interfaces/configs';

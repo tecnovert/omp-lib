@@ -253,6 +253,10 @@ export abstract class Rpc {
  */
 export abstract class CtRpc extends Rpc {
 
+    private static sleepDelay(ms: number): Promise<unknown> {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     // to add support for another coin, the abstract methods below need to be implemented
     // example implementations in test/rpc.stub.ts and rpc-ct.stub.ts
 
@@ -265,10 +269,6 @@ export abstract class CtRpc extends Rpc {
 
     // Importing and signing
     public abstract verifyCommitment(wallet: string, commitment: string, blindFactor: string, amount: number): Promise<boolean>;
-
-    private static sleepDelay(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
 
     public async createPrevoutFrom(
         wallet: string, typeFrom: OutputType, typeTo: OutputType, satoshis: number, blindingfactor?: string, address?: CryptoAddress
@@ -317,7 +317,7 @@ export abstract class CtRpc extends Rpc {
         //  zaSmilingIdiot 2022-01-09: Updating the "retarded fix" to add a retry delay
 
         const maxIter = 10;
-        let found: RpcUnspentOutput | undefined = undefined;
+        let found: RpcUnspentOutput | undefined;
         for (let ii = 0; ii < maxIter; ++ii) {
             const unspent: RpcUnspentOutput[] = await this.listUnspent(wallet, typeTo, 0);
             const output = unspent.find(tmpVout => {

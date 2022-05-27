@@ -1,7 +1,6 @@
 import { injectable } from 'inversify';
 import 'reflect-metadata';
 import * as WebRequest from 'web-request';
-import * as _ from 'lodash';
 import { Rpc } from '../src/abstract/rpc';
 import { RpcAddressInfo, RpcBlockchainInfo, RpcOutput, RpcRawTx, RpcUnspentOutput, RpcWallet, RpcWalletDir } from '../src/interfaces/rpc';
 import { OutputType } from '../src/interfaces/crypto';
@@ -114,9 +113,7 @@ export class CoreRpcService extends Rpc {
     public async walletLoaded(name: string): Promise<boolean> {
         return await this.listLoadedWallets()
             .then(result => {
-                const found = _.find(result, wallet => {
-                    return wallet === name;
-                });
+                const found = result.find(wallet => wallet === name);
                 const loaded = found ? true : false;
                 return loaded;
             });
@@ -129,9 +126,7 @@ export class CoreRpcService extends Rpc {
     public async walletExists(name: string): Promise<boolean> {
         return await this.listWalletDir()
             .then(result => {
-                const found = _.find(result.wallets, wallet => {
-                    return wallet.name === name;
-                });
+                const found = result.wallets.find(wallet => wallet.name === name);
                 const exists = found ? true : false;
                 return exists;
             });
