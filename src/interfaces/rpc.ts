@@ -40,7 +40,7 @@ export interface RpcVout {
 
 export interface RpcScriptPubKey {
     hex: string;
-    addresses: string[];
+    address: string;
 }
 
 export interface RpcOutput {

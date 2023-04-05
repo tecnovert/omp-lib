@@ -188,12 +188,12 @@ export abstract class Rpc {
             || !vout.valueSat
             || !vout.scriptPubKey
             || !vout.scriptPubKey.hex
-            || !vout.scriptPubKey.addresses || vout.scriptPubKey.addresses.length !== 1) {
+            || !vout.scriptPubKey.address) {
             throw new Error('Transaction does not contain matching Output.');
         }
         utxo._satoshis = vout.valueSat;
         utxo._scriptPubKey = vout.scriptPubKey.hex;
-        utxo._address = vout.scriptPubKey.addresses[0];
+        utxo._address = vout.scriptPubKey.address;
         return utxo;
     }
 
@@ -393,7 +393,7 @@ export abstract class CtRpc extends Rpc {
 
         const commitment = found.valueCommitment;
         const scriptPubKey = found.scriptPubKey.hex;
-        const address = found.scriptPubKey.addresses[0];
+        const address = found.scriptPubKey.address;
 
         const ok = await this.verifyCommitment(wallet, commitment, utxo.blindFactor, utxo._satoshis);
         if (!ok) {
